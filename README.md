@@ -40,3 +40,5 @@ Add your GitHub Pages URL here.
 ## Author
 
 Your Name
+
+https://pragna098.github.io/devfolio2/
