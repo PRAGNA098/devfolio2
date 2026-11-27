@@ -1,0 +1,199 @@
+/* COLOUR AND TYPE SYSTEM */
+:root {
+    --brand: #6c63ff;
+    --dark: #20203a;
+    --light: #f5f6ff;
+    --white: #ffffff;
+    --text: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a9a4ff;
+}
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about h2 {
+    color: var(--dark);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about h3 {
+    color: var(--brand);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* PROJECTS SECTION */
+.projects {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.projects h2 {
+    color: var(--dark);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--brand);
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    margin-bottom: 18px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: var(--brand);
+    color: var(--white);
+    padding: 9px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    background-color: var(--dark);
+}
+
+/* CONTACT SECTION */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.contact-links a {
+    color: #a9a4ff;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about h2 {
+        font-size: 44px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* RESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
